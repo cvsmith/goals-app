@@ -1,5 +1,16 @@
 <h1>My goals</h1>
 
 <h2>Do more:</h2>
+<ul>
+  <% @goals.each do |goal| %>
+    <li>
+      <%= goal.name %>
+      (category: <%= goal.category.name %>)
+      (user: <%= goal.category.user.name %>)
+      (email: <%= goal.category.user.email%>)
+      (times per week: <%= goal.frequency%>)
+    </li>
+  <% end %>
+</ul>
 
 <h2>Do less:</h2>
